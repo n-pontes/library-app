@@ -85,6 +85,7 @@ addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96
 
 popup.addEventListener("click", () => {
     modal.style.display = "flex"; // Make it visible
+    modal.style.visibility = "visible"; // Make it visible
 });
 
 window.addEventListener("click", (event) => {

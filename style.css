@@ -9,14 +9,11 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html{
-    color: white;
-    text-align: center;
-}
-
 body {
     padding: min(50px, 7%);
     background-color: hsl(240, 21%, 6%);
+    text-align: center;
+    color: white;
 }
 
 h1{
@@ -36,6 +33,7 @@ h2{
     border: 1px solid hsl(215, 10%, 33%);
     border-radius: 10px;
     background-color: hsl(223, 9%, 15%);
+    text-align: center;
     text-align: center;
 }
 
