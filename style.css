@@ -8,13 +8,11 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 body {
     padding: min(50px, 7%);
     background-color: hsl(240, 21%, 6%);
     color: white;
 }
-
 h1{
     margin: 30px 0;
     text-align: center;
@@ -22,7 +20,6 @@ h1{
     text-transform: uppercase;
     letter-spacing: 10px;
 }
-
 
 h2{
     padding-bottom: 10px;
@@ -34,13 +31,17 @@ h2{
 
 .card{
     padding: 2em;
-    border: 1px solid hsl(215, 10%, 33%);
-    border-radius: 10px;
+    border: none;
+    border-radius: 12px;
     background-color: hsl(223, 9%, 15%);
-    text-align: center;
-    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Hover effect for INteractivity */
+
+.card:hover {
+    transform: translateY(-5px); /* Lift slightly on hover */
+}
 .grid-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -48,3 +49,15 @@ h2{
     gap: 15px;
 }
 
+/* Improves Typography for better design and modern look */
+.card h2 {
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 95%);
+    margin-bottom: 0.5em;
+}
+.card p {
+    font-size: 1rem;
+    color: hsl(0, 0%, 80%);
+    margin-bottom: 0.3em;
+    line-height: 1.4;
+}
