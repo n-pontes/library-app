@@ -57,6 +57,6 @@ addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96
 
 // console.table(myBooks);
 
-displayBooks();
+//displayBooks();
 
 
