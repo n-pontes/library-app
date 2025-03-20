@@ -13,3 +13,7 @@ class Book {
     }
 }
 
+// Create a new book
+const newBook = new Book ('The Count of Monte Cristo', 'Alexandre Dumas', 'Historical Fiction', 1276, 'January 15, 1846', 'Read');
+
+console.table(newBook);
