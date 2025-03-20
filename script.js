@@ -10,6 +10,21 @@ const modal = document.querySelector(".modal");
 // Books will be stored in this array
 const myBooks = [];
 
+const saveToLocalStorage = () => {
+    localStorage.setItem('myBooks', JSON.stringify(myBooks));
+};
+
+const loadFromLocalStorage = () => {
+    const storedBooks = localStorage.getItem('myBooks');
+    if (storedBooks) {
+        myBooks.length = 0; // Clear array to avoid duplicates
+        myBooks.push(...JSON.parse(storedBooks));
+        displayBooks(); // Display books after loading
+    }
+};
+
+window.addEventListener('load', loadFromLocalStorage);
+
 // The book constructor
 class Book {
     constructor (title, author, genre, pages, year, read) {
@@ -28,10 +43,12 @@ const deleteBook = (id) => {
     const index = myBooks.findIndex((book) => book.id === id);
     if (index !== -1) {
         myBooks.splice(index, 1); // Remove the book
-        const bookToRemove = document.querySelector(`.delete-btn[data-id="${id}"]`).parentElement;
-        if (bookToRemove) {
-            bookToRemove.remove();
-        }
+        saveToLocalStorage(); // Save updated array to localStorage
+        displayBooks(); // Refresh display
+        // const bookToRemove = document.querySelector(`.delete-btn[data-id="${id}"]`).parentElement;
+        // if (bookToRemove) {
+        //     bookToRemove.remove();
+        // }
     }
 };
 
@@ -64,6 +81,8 @@ const addBookToLibrary = (title, author, genre, pages, year, read) => {
     const newBook = new Book(title, author, genre, pages, year, read);
     newBook.id = crypto.randomUUID(); 
     myBooks.push(newBook);
+    saveToLocalStorage();
+    displayBooks();
 
     // Create card element
     const createDiv = document.createElement('div');
@@ -143,6 +162,7 @@ const closeButton = document.querySelector(".close-btn");
 closeButton.addEventListener("click", () => {
     modal.style.display = "none";
 });
+
 
 
 
