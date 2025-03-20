@@ -10,8 +10,8 @@
 }
 body {
     padding: min(50px, 7%);
-    background-color: hsl(240, 21%, 6%);
-    color: white;
+    background-image: linear-gradient(to bottom, hsl(220, 15%, 12%), hsl(220, 15%, 8%));
+    color: hsl(0, 0%, 100%); /* Keeps text readable */
 }
 h1{
     color: white;
@@ -31,9 +31,9 @@ h2{
 .card{
     padding: 2em;
     border: none;
-    border-radius: 12px;
-    background-color: hsl(223, 9%, 15%);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 14px;
+    background-color: hsl(223, 9%, 20%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Hover effect for INteractivity */

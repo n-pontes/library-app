@@ -1,11 +1,12 @@
 .container{
     width: clamp(300px, 50vw, 600px);
     padding: clamp(16px, 2vw, 32px);
-    background: hsl(223, 9%, 15%);
+    background: linear-gradient(to bottom right, hsl(223, 9%, 18%), hsl(223, 9%, 12%));
     padding: 25px;
-    border-radius: 8px;
+    border: 1px solid hsl(223, 9%, 30%);
+    border-radius: 12px;
     position: relative; /* For close button positioning */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 10px hsl(223, 40%, 20%);
 }
 .container header{
     font-size:1.5rem ;
@@ -36,21 +37,27 @@
     border-radius: 6px;
     padding: 0 15px;
 }
-.form button{
-    height: 55px;
-    width: 100%;
+.form button {
     color: hsl(0, 0%, 100%);
     border: none;
+    padding: 16px 32px;
     margin-top: 30px;
     cursor: pointer;
     border-radius: 6px;
     font-size: 1rem;
     font-weight: 400;
-    transition: all 0.2s ease;
-    background: hsl(250, 95%, 70%);
+    background: hsl(220, 90%, 60%);
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-.form button:hover{
-    background: hsl(250, 95%, 60%);
+
+.form button:hover {
+    background: hsl(220, 95%, 65%);
+    transform: translateY(-2px);
+}
+.form button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 .modal{
     display: none;
@@ -67,19 +74,6 @@
     justify-content: center;
     backdrop-filter: blur(5px); /* Blurs everything behind it */
 }
-.close-btn {
-    height: 55px;
-    width: 100%;
-    color: hsl(0, 0%, 100%);
-    border: none;
-    margin-top: 30px;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 400;
-    transition: all 0.2s ease;
-    background: hsl(250, 95%, 70%);
-}
 #popup{
     border:none;
     font-weight: 500;
@@ -95,6 +89,7 @@
 }
 
 #popup:hover{
+    background: hsl(220, 95%, 65%);
     transform: scale(1.1);
 }
 
