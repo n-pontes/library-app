@@ -35,6 +35,30 @@ const deleteBook = (id) => {
     }
 };
 
+const form = document.querySelector('.form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent page refresh
+
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const genre = document.getElementById('genre').value;
+    const pages = document.getElementById('pages').value;
+    const year = document.getElementById('year').value;
+    const read = document.getElementById('read').checked ? 'Read' : 'Not Read';
+
+    // Add the new book to the library
+    addBookToLibrary(title, author, genre, pages, year, read);
+
+    // Refresh the display to show the new book
+    displayBooks();
+
+    // Clear the form after submission
+    form.reset();
+
+    modal.style.display = 'none';
+});
+
 // Function that adds a new book into the myBooks array
 const addBookToLibrary = (title, author, genre, pages, year, read) => {
     const newBook = new Book(title, author, genre, pages, year, read);
@@ -94,14 +118,14 @@ const displayBooks = () => {
 };
 
 // Testing to insert books manually
-addBookToLibrary('The Count of Monte Cristo', 'Alexandre Dumas', 'Historical Fiction', 1276, 'January 15, 1846', 'Read');
-addBookToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 'Russian Literature', 671, 'January 1, 1866', 'Read');
-addBookToLibrary('The Metamorphosis', 'FRanz Kafka', 'Philosophy', 201, 'October 1, 1915', 'Read');
-addBookToLibrary('The Picture of Dorian Gray', 'Oscar Wilde', 'Classics', 253, 'June 1, 1890', 'Read');
-addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
-addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
-addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
-addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
+// addBookToLibrary('The Count of Monte Cristo', 'Alexandre Dumas', 'Historical Fiction', 1276, 'January 15, 1846', 'Read');
+// addBookToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 'Russian Literature', 671, 'January 1, 1866', 'Read');
+// addBookToLibrary('The Metamorphosis', 'FRanz Kafka', 'Philosophy', 201, 'October 1, 1915', 'Read');
+// addBookToLibrary('The Picture of Dorian Gray', 'Oscar Wilde', 'Classics', 253, 'June 1, 1890', 'Read');
+// addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
+// addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
+// addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
+// addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
 
 popup.addEventListener("click", () => {
     modal.style.display = "flex"; // Make it visible
