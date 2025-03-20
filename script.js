@@ -1,3 +1,7 @@
+// Selects DOM elements
+const display = document.querySelector("#library-display");
+const container = document.querySelector(".grid-container");
+
 // Books will be stored in this array
 const myBooks = [];
 
@@ -19,6 +23,21 @@ const addBookToLibrary = (title, author, genre, pages, year, read) => {
     const newBook = new Book(title, author, genre, pages, year, read);
     crypto.randomUUID(newBook); 
     myBooks.push(newBook);
+
+    // Create card element
+    const createDiv = document.createElement('div');
+    createDiv.classList.add('card');
+    createDiv.innerHTML = `
+        <h2>${newBook.title}</h2>
+        <p>${newBook.author}</p>
+        <p>${newBook.genre}</p>
+        <p>${newBook.pages} pages</p>
+        <p>Published: ${newBook.year}</p>
+        <p>Status: ${newBook.read}</p>    
+    `;
+
+    // Append the card to the container
+    container.appendChild(createDiv);
 }
 
 // Function to delete a Book from the myBooks array
@@ -43,10 +62,10 @@ const displayBooks = () => {
 
 // Testing to insert books manually
 addBookToLibrary('The Count of Monte Cristo', 'Alexandre Dumas', 'Historical Fiction', 1276, 'January 15, 1846', 'Read');
-addBookToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 'Russian Literature', 671, 'January 1, 1866', 'Read');
-addBookToLibrary('The Metamorphosis', 'FRanz Kafka', 'Philosophy', 201, 'October 1, 1915', 'Read');
-addBookToLibrary('The Picture of Dorian Gray', 'Oscar Wilde', 'Classics', 253, 'June 1, 1890', 'Read');
-addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
+// addBookToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 'Russian Literature', 671, 'January 1, 1866', 'Read');
+// addBookToLibrary('The Metamorphosis', 'FRanz Kafka', 'Philosophy', 201, 'October 1, 1915', 'Read');
+// addBookToLibrary('The Picture of Dorian Gray', 'Oscar Wilde', 'Classics', 253, 'June 1, 1890', 'Read');
+// addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
 
 // Testing
 // console.table(myBooks);
