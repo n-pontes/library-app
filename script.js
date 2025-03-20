@@ -92,7 +92,7 @@ const addBookToLibrary = (title, author, genre, pages, year, read) => {
 
 // Function to display books (properly formatted)
 const displayBooks = () => {
-    const container = document.getElementById('library-display');
+    const container = document.querySelector('.grid-container');
     container.innerHTML = ''; // Clear the previous display to avoid duplicates
 
     myBooks.forEach(book => {
