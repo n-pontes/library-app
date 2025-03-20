@@ -121,10 +121,10 @@ addBookToLibrary('The Count of Monte Cristo', 'Alexandre Dumas', 'Historical Fic
 addBookToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 'Russian Literature', 671, 'January 1, 1866', 'Read');
 addBookToLibrary('The Metamorphosis', 'FRanz Kafka', 'Philosophy', 201, 'October 1, 1915', 'Read');
 addBookToLibrary('The Picture of Dorian Gray', 'Oscar Wilde', 'Classics', 253, 'June 1, 1890', 'Read');
-addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
-addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
-addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
-addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', );
+addBookToLibrary('1984', 'George Orwell', 'Dystopian', 328, 'June 8, 1949', 'Read');
+addBookToLibrary('To Kill a Mockingbird', 'Harper Lee', 'Southern Gothic', 281, 'July 11, 1960', 'Read');
+addBookToLibrary('Pride and Prejudice', 'Jane Austen', 'Romance', 279, 'January 28, 1813', 'Not Read');
+addBookToLibrary('Moby-Dick', 'Herman Melville', 'Adventure', 635, 'October 18, 1851', 'Read');
 
 popup.addEventListener("click", () => {
     modal.style.display = "flex"; // Make it visible
