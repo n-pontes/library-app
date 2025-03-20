@@ -3,8 +3,8 @@ const myBooks = [];
 
 // The book constructor
 class Book {
-    constructor (tittle, author, genre, pages, year, read) {
-        this.tittle = tittle;
+    constructor (title, author, genre, pages, year, read) {
+        this.title = title;
         this.author = author;
         this.genre = genre;
         this.pages = pages;
