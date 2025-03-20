@@ -5,9 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modo Library</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+    <button type="button" id="popup">Add New Book</button>
+    <div class="modal">
+        <div class="container">
+            <header>Book Details</header>
+            <form action="#" class="form">
+                <div class="input-box">
+                    <label>Title:</label>
+                    <input type="text" placeholder="Enter title of the book">
+                </div>
+                <div class="input-box">
+                    <label>Author:</label>
+                    <input type="text" placeholder="Enter Authors Name">
+                </div>
+                <div class="input-box">
+                    <label>Genre:</label>
+                    <input type="text" placeholder="Enter book genre">
+                </div>
+                <div class="input-box">
+                    <label>Pages:</label>
+                    <input type="text" placeholder="Enter the number of pages">
+                </div>
+                <div class="input-box">
+                    <label>Year:</label>
+                    <input type="text" placeholder="Enter the publication year">
+                </div>
+                <button>Submit</button>
+            </form>
+            <button class="close-btn">&times;</button>
+        </div>
+    </div>
     <h1>Mondo Library</h1>
     <div id="library-display">
         <div class="grid-container"></div>

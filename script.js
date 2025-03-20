@@ -2,6 +2,11 @@
 const display = document.querySelector("#library-display");
 const container = document.querySelector(".grid-container");
 
+// Modal popup 
+
+let popup = document.querySelector("#popup");
+const modal = document.querySelector(".modal");
+
 // Books will be stored in this array
 const myBooks = [];
 
@@ -77,5 +82,22 @@ addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96
 // console.table(myBooks);
 
 //displayBooks();
+
+popup.addEventListener("click", () => {
+    modal.style.display = "flex"; // Make it visible
+});
+
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none"; // Close if clicked outside
+    }
+});
+
+const closeButton = document.querySelector(".close-btn");
+
+closeButton.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
 
 
