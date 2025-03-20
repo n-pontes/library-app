@@ -88,4 +88,7 @@ h2{
     background: hsl(0, 77%, 68%);
     transform: scale(1.1);
 }
+.checkBox{
+    padding-top: 15px;
+}
 
