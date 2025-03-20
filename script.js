@@ -10,21 +10,6 @@ const modal = document.querySelector(".modal");
 // Books will be stored in this array
 const myBooks = [];
 
-const saveToLocalStorage = () => {
-    localStorage.setItem('myBooks', JSON.stringify(myBooks));
-};
-
-const loadFromLocalStorage = () => {
-    const storedBooks = localStorage.getItem('myBooks');
-    if (storedBooks) {
-        myBooks.length = 0; // Clear array to avoid duplicates
-        myBooks.push(...JSON.parse(storedBooks));
-        displayBooks(); // Display books after loading
-    }
-};
-
-window.addEventListener('load', loadFromLocalStorage);
-
 // The book constructor
 class Book {
     constructor (title, author, genre, pages, year, read) {
@@ -43,12 +28,10 @@ const deleteBook = (id) => {
     const index = myBooks.findIndex((book) => book.id === id);
     if (index !== -1) {
         myBooks.splice(index, 1); // Remove the book
-        saveToLocalStorage(); // Save updated array to localStorage
-        displayBooks(); // Refresh display
-        // const bookToRemove = document.querySelector(`.delete-btn[data-id="${id}"]`).parentElement;
-        // if (bookToRemove) {
-        //     bookToRemove.remove();
-        // }
+        const bookToRemove = document.querySelector(`.delete-btn[data-id="${id}"]`).parentElement;
+        if (bookToRemove) {
+            bookToRemove.remove();
+        }
     }
 };
 
@@ -62,7 +45,7 @@ form.addEventListener('submit', (e) => {
     const genre = document.getElementById('genre').value;
     const pages = document.getElementById('pages').value;
     const year = document.getElementById('year').value;
-    const read = document.getElementById('read').checked ? 'Read' : 'Not Read';
+    const read = document.getElementById('read').checked ? 'Read' : 'Not';
 
     // Add the new book to the library
     addBookToLibrary(title, author, genre, pages, year, read);
@@ -81,8 +64,6 @@ const addBookToLibrary = (title, author, genre, pages, year, read) => {
     const newBook = new Book(title, author, genre, pages, year, read);
     newBook.id = crypto.randomUUID(); 
     myBooks.push(newBook);
-    saveToLocalStorage();
-    displayBooks();
 
     // Create card element
     const createDiv = document.createElement('div');
@@ -136,15 +117,14 @@ const displayBooks = () => {
     });
 };
 
-// Testing to insert books manually
-// addBookToLibrary('The Count of Monte Cristo', 'Alexandre Dumas', 'Historical Fiction', 1276, 'January 15, 1846', 'Read');
-// addBookToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 'Russian Literature', 671, 'January 1, 1866', 'Read');
-// addBookToLibrary('The Metamorphosis', 'FRanz Kafka', 'Philosophy', 201, 'October 1, 1915', 'Read');
-// addBookToLibrary('The Picture of Dorian Gray', 'Oscar Wilde', 'Classics', 253, 'June 1, 1890', 'Read');
-// addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
-// addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
-// addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
-// addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
+addBookToLibrary('The Count of Monte Cristo', 'Alexandre Dumas', 'Historical Fiction', 1276, 'January 15, 1846', 'Read');
+addBookToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 'Russian Literature', 671, 'January 1, 1866', 'Read');
+addBookToLibrary('The Metamorphosis', 'FRanz Kafka', 'Philosophy', 201, 'October 1, 1915', 'Read');
+addBookToLibrary('The Picture of Dorian Gray', 'Oscar Wilde', 'Classics', 253, 'June 1, 1890', 'Read');
+addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
+addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
+addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
+addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', );
 
 popup.addEventListener("click", () => {
     modal.style.display = "flex"; // Make it visible
@@ -162,7 +142,6 @@ const closeButton = document.querySelector(".close-btn");
 closeButton.addEventListener("click", () => {
     modal.style.display = "none";
 });
-
 
 
 
