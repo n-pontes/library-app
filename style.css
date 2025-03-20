@@ -12,12 +12,12 @@
 body {
     padding: min(50px, 7%);
     background-color: hsl(240, 21%, 6%);
-    text-align: center;
     color: white;
 }
 
 h1{
     margin: 30px 0;
+    text-align: center;
 }
 
 h2{

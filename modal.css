@@ -1,6 +1,6 @@
 .container{
-    max-width: 400px;
-    width: 90%;
+    width: clamp(300px, 50vw, 600px);
+    padding: clamp(16px, 2vw, 32px);
     background: hsl(0, 0%, 100%);
     padding: 25px;
     border-radius: 8px;
@@ -79,5 +79,22 @@
     font-weight: 400;
     transition: all 0.2s ease;
     background: hsl(250, 95%, 70%);
+}
+#popup{
+    position: absolute;
+    top: 4%;
+    left: 1.5rem;
+    /* width:80px;
+    height:80px; */
+    width: clamp(50px, 5vw, 60px);
+    height: clamp(50px, 5vw, 60px);
+    border-radius: 50%;
+    border:none;
+    background-color:lightgrey;
+    font-weight: 800;
+    font-size: 1.4rem;
+    cursor: pointer;
+    background: hsl(250, 95%, 70%);
+    color: hsl(0, 0%, 100%);
 }
 
