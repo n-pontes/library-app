@@ -120,7 +120,7 @@ const displayBooks = () => {
 addBookToLibrary('The Count of Monte Cristo', 'Alexandre Dumas', 'Historical Fiction', 1276, 'January 15, 1846', 'Read');
 addBookToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 'Russian Literature', 671, 'January 1, 1866', 'Read');
 addBookToLibrary('The Metamorphosis', 'FRanz Kafka', 'Philosophy', 201, 'October 1, 1915', 'Read');
-addBookToLibrary('The Picture of Dorian Gray', 'Oscar Wilde', 'Classics', 253, 'June 1, 1890', 'Read');
+addBookToLibrary('The Picture of Dorian Gray', 'Oscar Wilde', 'Classics', 253, 'June 2, 1890', 'Read');
 addBookToLibrary('1984', 'George Orwell', 'Dystopian', 328, 'June 8, 1949', 'Read');
 addBookToLibrary('To Kill a Mockingbird', 'Harper Lee', 'Southern Gothic', 281, 'July 11, 1960', 'Read');
 addBookToLibrary('Pride and Prejudice', 'Jane Austen', 'Romance', 279, 'January 28, 1813', 'Not Read');
