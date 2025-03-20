@@ -13,9 +13,7 @@ class Book {
     }
 }
 
-// Create a new book
-// const newBook = new Book ('The Count of Monte Cristo', 'Alexandre Dumas', 'Historical Fiction', 1276, 'January 15, 1846', 'Read');
-
+// Function that adds a new book into the myBooks array
 const addBookToLibrary = (title, author, genre, pages, year, read) => {
     const newBook = new Book(title, author, genre, pages, year, read);
     myBooks.push(newBook);
