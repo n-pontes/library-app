@@ -17,7 +17,7 @@ h1{
     color: white;
     text-transform: uppercase;
     letter-spacing: 10px;
-    font-size: 2.4rem;
+    font-size: 3.4rem;
 }
 
 h2{
@@ -50,7 +50,7 @@ h2{
 
 /* Improves Typography for better design and modern look */
 .card h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: hsl(0, 0%, 95%);
     margin-bottom: 0.5em;
 }
