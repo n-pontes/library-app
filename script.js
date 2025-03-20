@@ -21,6 +21,15 @@ const addBookToLibrary = (title, author, genre, pages, year, read) => {
     myBooks.push(newBook);
 }
 
+// Function to delete a Book from the myBooks array
+const deleteBook = (id) => {
+    const index = myBooks.findIndex((book) => book.id === id);
+    if (index !== -1) {
+        myBooks.splice(index, 1);
+        displayBooks(); // Re-render the UI
+    }
+};
+
 const displayBooks = () => {
     const container = document.getElementById('library-display');
     container.innerHTML = ''; // Clear the previous display to avoid duplicates
@@ -39,5 +48,15 @@ addBookToLibrary('The Metamorphosis', 'FRanz Kafka', 'Philosophy', 201, 'October
 addBookToLibrary('The Picture of Dorian Gray', 'Oscar Wilde', 'Classics', 253, 'June 1, 1890', 'Read');
 addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
 
+// Testing
+// console.table(myBooks);
+
+// Tests to delete the book on index 0
+// const bookIdToDelete = myBooks[0].id;
+// deleteBook(bookIdToDelete);
+
+// console.table(myBooks);
+
 displayBooks();
+
 
