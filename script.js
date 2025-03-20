@@ -31,7 +31,7 @@ const addBookToLibrary = (title, author, genre, pages, year, read) => {
         <h2>${newBook.title}</h2>
         <p>Author: ${newBook.author}</p>
         <p>Genre: ${newBook.genre}</p>
-        <p>Pages: ${newBook.pages} pages</p>
+        <p>Pages: ${newBook.pages}</p>
         <p>Published: ${newBook.year}</p>
         <p>Status: ${newBook.read}</p>    
     `;
