@@ -1,5 +1,5 @@
 // Books will be stored in this array
-const myLibrary = [];
+const myBooks = [];
 
 // The book constructor
 class Book {
