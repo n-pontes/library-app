@@ -4,6 +4,12 @@ const myBooks = [];
 // The book constructor
 class Book {
     constructor (tittle, author, genre, pages, year, read) {
-        // code will go here later
+        this.tittle = tittle;
+        this.author = author;
+        this.genre = genre;
+        this.pages = pages;
+        this.year = year;
+        this.read = read;
     }
 }
+
