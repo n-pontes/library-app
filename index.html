@@ -15,28 +15,31 @@
             <form action="#" class="form">
                 <div class="input-box">
                     <label>Title:</label>
-                    <input type="text" placeholder="Enter title of the book">
+                    <input type="text" placeholder="Enter title of the book" id="title" required>
                 </div>
                 <div class="input-box">
                     <label>Author:</label>
-                    <input type="text" placeholder="Enter Authors Name">
+                    <input type="text" placeholder="Enter Authors Name" id="author" required>
                 </div>
                 <div class="input-box">
                     <label>Genre:</label>
-                    <input type="text" placeholder="Enter book genre">
+                    <input type="text" placeholder="Enter book genre" id="genre" required>
                 </div>
                 <div class="input-box">
                     <label>Pages:</label>
-                    <input type="text" placeholder="Enter the number of pages">
+                    <input type="text" placeholder="Enter the number of pages" id="pages" required>
                 </div>
                 <div class="input-box">
                     <label>Year:</label>
-                    <input type="text" placeholder="Enter the publication year">
+                    <input type="text" placeholder="Enter the publication year" id="year" required>
                 </div>
                 <div class="submit-wrapper">
-                    <button>Submit</button>
+                    <button type="submit">Submit</button>
                 </div>
-                <!-- <button class="close-btn">&times;</button> -->
+                <label>
+                    <input type="checkbox" id="read" />
+                    Have you read this book?
+                </label>            
             </form>
         </div>
     </div>
