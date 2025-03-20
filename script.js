@@ -21,6 +21,23 @@ const addBookToLibrary = (title, author, genre, pages, year, read) => {
     myBooks.push(newBook);
 }
 
+const displayBooks = () => {
+    const container = document.getElementById('library-display');
+    container.innerHTML = ''; // Clear the previous display to avoid duplicates
+
+    myBooks.forEach(book => {
+        const bookCard = document.createElement('div');
+        bookCard.textContent = `${book.title} by ${book.author}`;
+        container.appendChild(bookCard);
+    });
+};
+
+// Testing to insert books manually
 addBookToLibrary('The Count of Monte Cristo', 'Alexandre Dumas', 'Historical Fiction', 1276, 'January 15, 1846', 'Read');
-console.table(myBooks);
+addBookToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 'Russian Literature', 671, 'January 1, 1866', 'Read');
+addBookToLibrary('The Metamorphosis', 'FRanz Kafka', 'Philosophy', 201, 'October 1, 1915', 'Read');
+addBookToLibrary('The Picture of Dorian Gray', 'Oscar Wilde', 'Classics', 253, 'June 1, 1890', 'Read');
+addBookToLibrary('The Little Prince', 'Antoine de Saint-Exupéry', 'Fantasy', 96, 'April 6, 1943', 'Read');
+
+displayBooks();
 
