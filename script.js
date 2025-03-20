@@ -33,9 +33,10 @@ const addBookToLibrary = (title, author, genre, pages, year, read) => {
     const createDiv = document.createElement('div');
     createDiv.classList.add('card');
 
-    const defaultCover = 'path-to-default-cover.jpg'; // Handles missing covers
+
+    // const defaultCover = 'cover.jpg'; // Handles missing covers
+    // <img src="${newBook.cover || defaultCover}" alt="Cover of ${newBook.title}" class="book-cover"></img>
     createDiv.innerHTML = `
-        <img src="${newBook.cover}" alt="Cover of ${newBook.title}" class="book-cover">
         <h2>${newBook.title}</h2>
         <p>Author: ${newBook.author}</p>
         <p>Genre: ${newBook.genre}</p>
