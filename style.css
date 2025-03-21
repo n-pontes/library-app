@@ -1,17 +1,39 @@
-/*
-    General styles
-*/
+/* A Modern CSS Reset - Credits to Josh W. Comeau */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: min(50px, 7%);
     background: hsl(220, 15%, 12%);
     color: hsl(0, 0%, 100%); /* Keeps text readable */
+}
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select{
+    font: inherit;
+}
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6{
+    overflow-wrap: break-word;
+}
+/* 8. Improve line wrapping */
+p{
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6{
+    text-wrap: balance;
+}
+#root, #__next {
+    isolation: isolate;
 }
 h1{
     color: white;
@@ -19,7 +41,6 @@ h1{
     letter-spacing: 10px;
     font-size: 3.4rem;
 }
-
 h2{
     padding-bottom: 10px;
 }
