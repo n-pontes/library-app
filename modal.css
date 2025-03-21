@@ -1,16 +1,29 @@
+:root{
+    --container-bg-color: linear-gradient(to bottom right, hsl(223, 9%, 18%), hsl(223, 9%, 12%));
+    --container-border-color: 1px solid hsl(223, 9%, 30%);
+    --container-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 10px hsl(223, 40%, 20%);
+    --container-text-color: hsl(0, 0%, 100%);
+    --input--text-color: hsl(0, 0%, 44%);
+    --input-border: 1px solid hsl(0, 0%, 87%);
+    --form-button-text-color: hsl(0, 0%, 100%);
+    --form-button-bg-color: hsl(220, 90%, 60%);
+    --form-button-hover-color: hsl(220, 95%, 65%);
+    --form-button-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    --modal-bg-color: rgba(0, 0, 0, 0.5);
+}
 .container{
     width: clamp(300px, 50vw, 600px);
     padding: clamp(16px, 2vw, 32px);
-    background: linear-gradient(to bottom right, hsl(223, 9%, 18%), hsl(223, 9%, 12%));
+    background: var(--container-bg-color);
     padding: 25px;
-    border: 1px solid hsl(223, 9%, 30%);
+    border: var(--container-border-color);
     border-radius: 12px;
     position: relative; /* For close button positioning */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 10px hsl(223, 40%, 20%);
+    box-shadow: var(--container-box-shadow);
 }
 .container header{
-    font-size:1.7rem ;
-    color: hsl(0, 0%, 100%);
+    font-size: 1.7rem ;
+    color: var(--container-text-color);
     font-weight: 700;
     text-align: center;
 }
@@ -24,23 +37,22 @@
 .input-box label{
     font-size:1rem;
     font-weight: 700;
-    color: hsl(0, 0%, 100%);
+    color: var(--container-text-color);
 }
-
 .form .input-box input{
     position: relative;
     height: 50px;
     width: 100%;
     outline: none;
     font-size: 1rem;
-    color: hsl(0, 0%, 44%);
+    color: var(--input--text-color);
     margin-top: 8px;
-    border: 1px solid hsl(0, 0%, 87%);
+    border: var(--input-border);
     border-radius: 6px;
     padding: 0 15px;
 }
 .form button {
-    color: hsl(0, 0%, 100%);
+    color: var(--form-button-text-color);
     border: none;
     padding: 16px 32px;
     margin-top: 30px;
@@ -48,18 +60,17 @@
     border-radius: 6px;
     font-size: 1rem;
     font-weight: 700;
-    background: hsl(220, 90%, 60%);
+    background: var(--form-button-bg-color);
     transition: background 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
 .form button:hover {
-    background: hsl(220, 95%, 65%);
+    background: var(--form-button-hover-color);
     transform: translateY(-2px);
 }
 .form button:active {
     transform: translateY(1px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: var(--form-button-box-shadow);
 }
 .modal{
     display: none;
@@ -69,7 +80,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background-color: var(--modal-bg-color); /* Dark overlay */
     z-index: 9999; /* High z-index to appear on top */
     display: flex;
     align-items: center;
@@ -83,18 +94,16 @@
     border-radius: 8px;
     padding: 16px 32px;
     cursor: pointer;
-    background: hsl(220, 90%, 60%);
-    color: hsl(0, 0%, 100%);
+    background: var(--form-button-bg-color);
+    color: var(--form-button-text-color);
     transition: transform 0.2s ease;
     text-align: center;
     display: inline-block;
 }
-
 #popup:hover{
-    background: hsl(220, 95%, 65%);
+    background: var(--form-button-hover-color);
     transform: scale(1.1);
 }
-
 /* .book-cover {
     width: 100%; 
     height: 180px; 
@@ -102,7 +111,6 @@
     border-radius: 8px;
     margin-bottom: 0.8em;
 } */
-
 .wrapper{
     display: flex;
     align-items: center;
@@ -111,7 +119,6 @@
     gap: 1rem;
     margin-bottom: 20px;
 }
-
 .submit-wrapper{
     display: flex;
     align-items: center;
