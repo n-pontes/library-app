@@ -1,7 +1,7 @@
 # Project: Word Vault Library
 Implementation of a Library app for The Odin Project curriculum.
 
-<img src="images/screenshot.png" alt="Project Screenshot" height="300" width="300"/>
+<img src="images/screenshot.png" alt="Project Screenshot" height="600" width="899"/>
 
 ![Project Screenshot](images/screenshot.png)
 
