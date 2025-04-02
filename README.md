@@ -4,7 +4,7 @@ Implementation of a Library app for The Odin Project curriculum.
 ## Stage with Added UI
 ### Benefits I got:
 + Gained hands-on experience in creating a user-friendly interface.
-+ Improved my understanding of object-oriented programming (OOP) in JavaScript.
++ Improved my understanding of object-oriented programming in JavaScript.
 + Enhanced my skills in styling and layout using CSS Grid.
 + Developed problem-solving skills through debugging and optimizing functionality.
 
@@ -20,7 +20,7 @@ Implementation of a Library app for The Odin Project curriculum.
 + Git and GitHub
 
 ## Summary
-This project involved building a functional library app where users can add, remove, and track the status of books. The primary goal was to apply the knowledge gained from The Odin Project to create an interactive web application. The project allowed me to explore DOM manipulation, object-oriented programming, and responsive design principles.
+A CRUD library app where users can add, remove, and track the status of books. This project applies knowledge from The Odin Project, focusing on DOM manipulation, object-oriented programming, and responsive design.
 
 ## Key Features:
 + Add Books – Users can add books with details such as title, author, genre, pages, publication year, and reading status.
@@ -28,4 +28,3 @@ This project involved building a functional library app where users can add, rem
 + Track Reading Status – The app allows users to mark books as 'Read' or 'Not Read'.
 + Unique ID Handling – Each book is assigned a unique ID using crypto.randomUUID() for efficient management.
 + Responsive Layout – The design adapts to different screen sizes using CSS Grid for a clean and consistent look.
-
